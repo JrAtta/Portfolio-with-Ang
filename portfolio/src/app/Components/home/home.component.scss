@@ -78,3 +78,251 @@ border-radius: 17px;
 .container-fluid header ul li a:hover {
   opacity: .7;
 }
+
+// main start here >>>>>>>>>>
+
+
+.img-portfolio{
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: image 4s ease-in-out 0s alternate  ;
+  overflow: hidden;
+
+}
+@keyframes image {
+  0%{
+      opacity: 0;
+      translate: 380px -250px;
+  }
+  30%{
+      opacity: 0;
+      translate: 220px -150px;
+  }
+  80%{
+      opacity: .5;
+      translate: 180px -50;
+  }
+  100%{
+      opacity: 1;
+      translate: 0px 0;
+  }
+
+}
+
+main .hint {
+ color: rgb(228 236 255);
+ font-size:1.1rem ;
+ letter-spacing: 1.2px;
+ width: 100%;
+}
+main .big-text {
+  font-size: 55px;
+  font-weight: 900;
+  width: 100%;
+  animation: text 4s both ease;
+
+}
+
+main .big-text .diff-color{
+  color: #cbacf9;
+  animation: subtext 5s alternate  ease-out;
+}
+@keyframes subtext {
+  0%{
+      opacity: 0;
+  }
+
+ 80%{
+      opacity: 0;
+  }
+
+  100%{
+      opacity: 1;
+  }
+
+}
+@keyframes text {
+  0%{
+      opacity: 0;
+      transform: translateY(-300px);
+  }
+  50%{
+      opacity: .5;
+      transform: translateY(100px);
+
+  }
+  100%{
+      opacity: 1;
+      transform: translateY(0px);
+  }
+
+}
+main .desc{
+  font-size: 1.4rem;
+  width: 100%;
+  line-height: 25px;
+  background-image: conic-gradient(from 90deg at 50% 50%, #e2cbff 0, #393bb2 50%, #e2cbff 100%);
+  background: linear-gradient(45deg, #e2cbff, #393bb2, #e2cbff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease infinite;
+  display: inline-block;
+  font-weight: 600;
+}
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.magic-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.magic-button {
+  position: relative;
+  padding: 8px 38px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 1;
+  transition: color 0.3s ease;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 2px solid ;
+  border-color:transparent;
+}
+
+/* Create the colorful border using gradient */
+.magic-button::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 5px;
+  /* background: linear-gradient(45deg, #e2cbff 0, #393bb2 50%, #e2cbff 100%); */
+  background-image: conic-gradient(from 90deg at 50% 50%, #e2cbff 0, #393bb2 50%, #e2cbff 100%);
+  -webkit-backdrop-filter: blur(64px);
+  backdrop-filter: blur(64px);
+  z-index: -1;
+  padding: 5px; /* Space for the border */
+  background-size: 400%;
+  /* animation: spin 5s linear infinite; */
+  animation: gradient-rotate 5s linear infinite;
+}
+/* Button inner background */
+.magic-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 5px;
+  z-index: -1;
+  margin: 1px;
+    background-color:rgb(2 6 23);
+}
+/* Smooth hover effect */
+.magic-button:hover {
+  color: #cbacf9;
+}
+
+/* Keyframes to rotate the gradient background */
+@keyframes gradient-rotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 400% 50%;
+      rotate: 1turn;
+  }
+}
+
+@keyframes spin {
+  100% {
+      transform: rotate(1turn);
+  }
+}
+
+// media >>>>>>>>>>>>>>>>>
+@media (max-width:1100px) {
+  .parent-container {
+    
+    height: fit-content;
+  }
+  main{
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+  }
+  .image{
+      width: 90%;
+      text-align: center;
+
+  }
+  .img-portfolio{
+      height: 300px;
+      width: 300px;
+  }
+  .descrption{
+      width: 90%;
+  }
+
+}
+@media (max-width:749px){
+  .img-portfolio{
+      height: 250px;
+      width: 250px;
+  }
+  main .hint {
+      color: rgb(228 236 255);
+      font-size:1rem ;
+      letter-spacing: 1.2px;
+   }
+   main .big-text {
+       font-size: 45px;
+       font-weight: 900;
+   }
+   main .big-text .diff-color{
+      color: rgb(203 172 249);
+   }
+   main .desc{
+       font-size: 1.2rem;
+
+
+   }
+}
+@media (max-width:630px){
+
+  main .hint {
+      color: rgb(228 236 255);
+      font-size:1rem ;
+      letter-spacing: 1.2px;
+   }
+   main .big-text {
+       font-size: 27px;
+       font-weight: 900;
+   }
+   main .big-text .diff-color{
+      color: rgb(203 172 249);
+   }
+   main .desc{
+       font-size: 1rem;
+   }
+}
