@@ -1,0 +1,49 @@
+:root{
+  --main-color:rgba(0, 3, 25, 0.976);
+  --second-color: #11037989;
+  --third-color:#cbacf9;
+  --gradient-color:conic-gradient(from 90deg at 50% 50%, #e2cbff 0, #393bb2 50%, #e2cbff 100%);
+  --bg-btn: #020617;
+  --bg-div: #04071D;
+
+}
+.radius{   //about
+  border-radius: 1.2rem;
+}
+.h-45{
+  height: 45%;
+}
+.w-35{
+  width: 35%;
+}
+
+.w-60{
+  width: 60%;
+}
+.vh-70{
+  height: 70vh;
+
+}
+.font{
+  font-size: 2rem;
+}
+.font1{
+  font-size: 1.5rem;
+}
+
+@media (max-width:992px) {
+  .font{
+    font-size: 1.5rem;
+  }
+  .font1{
+    font-size: 1.2rem;
+  }
+}
+@media (max-width:768px) {
+  .font{
+    font-size: 1.2rem;
+  }
+  .font1{
+    font-size: 1.2rem;
+  }
+}
