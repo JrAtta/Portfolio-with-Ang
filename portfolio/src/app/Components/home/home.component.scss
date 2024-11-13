@@ -17,47 +17,47 @@
 .body::before{
   content: '';
   position: absolute;
-  width: 400px;
-  height: 400px;
-  border-radius: 70% 40% 100%;
-  background-color: var(--third-color);
-  filter: blur(70px);
-  opacity: .4;
+  width: 350px;
+  height: 350px;
+  border-radius: 70% 40% 100% 20%;
+  background: linear-gradient(var(--third-color), var(--main-color));
+  filter: blur(20px);
   top: 0;
   right: 0;
-  opacity: .2;
-
-  animation: turn 7s linear 0s infinite both ;
+  opacity: .3;
+  display: none;
+  animation: turn 15s linear 5s infinite both alternate-reverse ;
   @media (max-width:750px) {
     width: 300px;
   height: 300px;
+  display: block;
+  @keyframes turn {
+    0%{
+      top: 0;
+      right: 0;
+    }
+   25%{
+       top: 25%;
+      right: 25%;
+    }
+    50%{
+      bottom: 50%;
+      right: 50%;
+    }
+    75%{
+      top:75%;
+      right:75%;
+    }
+    100%{
+       top: 100%;
+      right: 100%;
+    }
+
+
 
   }
 
-}
-@keyframes turns {
-  // 0%{
-  //   top: 0;
-  //   right:  0;
-  // }
-  30%{
-    top: 30%;
-    right:  15%;
   }
-  50%{
-    top: 55%;
-    right:  30%;
-  }
-  70%{
-    top: 0%;
-    right:  45%;
-  }
-  100%{
-    top: 55%;
-    right:  90%;
-  }
-
-
 
 }
 .container-fluid::before {
@@ -131,7 +131,19 @@
 
 // main start here >>>>>>>>>>
 
+main{
+  margin-top: 3rem;
+  .descrption{
+    margin-top: 3rem;
+  }
+  @media (max-width:1100px) {
+    margin-top: 0;
+    .descrption{
+      margin-top: 1.5rem;
+    }
+  }
 
+}
 .img-portfolio{
   height: 350px;
   width: 350px;
