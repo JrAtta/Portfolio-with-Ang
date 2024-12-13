@@ -1,7 +1,7 @@
 .parent{
   background: var(--main-color);
   // padding: 50px 0;
-  // margin-bottom: 80px;
+  padding-top: 50px ;
 }
 
 .content{
@@ -393,7 +393,7 @@ article{
     flex-direction: column;
     gap: 25px ;
     height: 100vh;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
     .left-part{
       width: 100%;
       order: 1;
